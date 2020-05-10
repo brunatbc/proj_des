@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Tuned.</title>
+    <link rel="stylesheet" href=" {% static 'css/estilo.css'%}">
 </head>
 <body>
-   <h1> Sua nova maneira de comprar online.</h1>
+
+    <img src="{%static 'img/logomarca.png'%}">
+
+   <h2> Sua nova maneira de comprar online.</h2>
   {% for a in albuns%}
    <a> {{a.name}} </a>
     {%endfor%}
+
+
 </body>
 </html>
