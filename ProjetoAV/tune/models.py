@@ -2,12 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-
-
-
-
-
 class Musica (models.Model):
     name = models.CharField('name',max_length = 30 )
     author = models.CharField('author', max_length = 50)
