@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <title>Tuned.</title>
     <link rel="stylesheet" href=" {% static 'css/estilo.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
+<div class="logo">
     <img src="{%static 'img/logomarca.png'%}">
-
-   <h2> Sua nova maneira de comprar online.</h2>
-  {% for a in albuns%}
-   <a> {{a.name}} </a>
-    {%endfor%}
+    <h2>Tudo sobre música</h2>
+<div>
+    <div class="divbotao">
+<input type="button" value="Página Incial" class="botaosm"/>
+    </div>
 
 
 </body>
