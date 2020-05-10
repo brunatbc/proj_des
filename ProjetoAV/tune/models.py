@@ -15,7 +15,7 @@ class Album (models.Model):
         ("Deluxe","Deluxe"),
     )
     name = models.CharField('name',max_length = 30 )
-    anameuthor = models.CharField('author', max_length=50)
+    author = models.CharField('author', max_length=50)
     version = models.CharField(max_length=20, choices=VERSION_CHOICES)
     desc = models.CharField('desc', max_length=500)
 
