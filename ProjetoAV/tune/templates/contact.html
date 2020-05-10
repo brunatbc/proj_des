@@ -1,10 +1,28 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fale Conosco</title>
+    <title>Artistas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href=" {% static 'css/estilo.css'%}">
 </head>
 <body>
-      <h1>Dúvidas, sugestões ou críticas?</h1>
+
+<div class="logo">
+    <img src="{%static 'img/logomarca.png'%}">
+    <h2>Artistas</h2>
+</div>
+<div class="div-feed">
+          {% for a in artistas%}
+
+        <ul class="ul-feed">
+            <li class="lititle">{{a.name}}</li>
+            <li><label>Idade : </label><br><input class="txtbox" type="text" value="{{a.age}}" readonly> </li>
+             <li><label>Nacionalidade : </label><br><input class="txtbox" type="text" value="{{a.nationality}}" readonly> </li>
+        </ul>
+
+        {%endfor%}
+    </div>
 </body>
 </html>

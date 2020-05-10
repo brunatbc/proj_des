@@ -1,12 +1,29 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pedido</title>
+    <title>Albuns</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href=" {% static 'css/estilo.css'%}">
 </head>
 <body>
- <h1> Aqui o form dos pedidos</h1>
+
+<div class="logo">
+    <img src="{%static 'img/logomarca.png'%}">
+    <h2>Álbuns</h2>
+</div>
+<div class="div-feed">
+          {% for a in albuns%}
+
+        <ul class="ul-feed">
+            <li class="lititle">{{a.name}}</li>
+            <li><label>Autor : </label><br><input class="txtbox" type="text" value="{{a.author}}" readonly> </li>
+            <li><label>Versão:</label><br><input class="txtbox" type="text" value="{{a.version}}" readonly> </li>
+            <li> <label>Descrição:</label><br><textarea class="txtbox" readonly>{{a.desc}}</textarea></li>
+        </ul>
+
+        {%endfor%}
+    </div>
 </body>
-</html>  {% for a in albuns%}
-   <a> {{a.name}} </a>
-    {%endfor%}
+</html>
